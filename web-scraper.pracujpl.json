@@ -1,0 +1,105 @@
+{
+    "_id": "pracuj",
+    "startUrl": [
+        "https://it.pracuj.pl/praca?its=ai-ml%2Cbig-data-science%2Cbusiness-analytics"
+    ],
+    "selectors": [
+        {
+            "id": "Article Links",
+            "parentSelectors": [
+                "next"
+            ],
+            "type": "SelectorLink",
+            "selector": "[data-test='default-offer'] a.tiles_cnb3rfy",
+            "multiple": true,
+            "linkType": "linkFromHref"
+        },
+        {
+            "id": "title",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorText",
+            "selector": "h1",
+            "multiple": false,
+            "regex": ""
+        },
+        {
+            "id": "specializations",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorText",
+            "selector": "[data-test=\"it-specializations\"] div.v1xz4nnx",
+            "multiple": false,
+            "regex": ""
+        },
+        {
+            "id": "responsibilites",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorGroup",
+            "selector": "[data-scroll-id='responsibilities-1'] li",
+            "extractAttribute": "class"
+        },
+        {
+            "id": "requirements",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorGroup",
+            "selector": "[data-scroll-id='requirements-expected-1'] li",
+            "extractAttribute": "class"
+        },
+        {
+            "id": "technologies",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorGroup",
+            "selector": "span._chip_1m1k8_1",
+            "extractAttribute": "data-test"
+        },
+        {
+            "id": "salary",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorText",
+            "selector": "div.s1n75vtn",
+            "multiple": false,
+            "regex": ""
+        },
+        {
+            "id": "employment-type",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorText",
+            "selector": "li[data-test='sections-benefit-employment-type-name']",
+            "multiple": false,
+            "regex": ""
+        },
+        {
+            "id": "schedule",
+            "parentSelectors": [
+                "Article Links"
+            ],
+            "type": "SelectorText",
+            "selector": "li.fillNth",
+            "multiple": false,
+            "regex": ""
+        },
+        {
+            "id": "next",
+            "parentSelectors": [
+                "_root",
+                "next"
+            ],
+            "paginationType": "auto",
+            "type": "SelectorPagination",
+            "selector": "[data-test=\"top-pagination-next-button\"]:not(.hidden)"
+        }
+    ]
+}
